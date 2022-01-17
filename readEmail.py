@@ -33,6 +33,7 @@ def read_mails():
 
 
 schedule.every(1).minutes.do(read_mails)
+schedule.run_pending()
 
 # while True:
 #     schedule.run_pending()
