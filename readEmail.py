@@ -5,10 +5,9 @@ import schedule, time
 from crontab import CronTab
 
 
-
+st.title("Email Reader")
 
 def read_mails():
-    st.title("Email Reader")
     host='imap.gmail.com'
     username='rajinder@swissbeauty.in'
     password='9711609399A'
@@ -35,6 +34,6 @@ def read_mails():
 
 schedule.every(1).minutes.do(read_mails)
 
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+# while True:
+#     schedule.run_pending()
+#     time.sleep(1)
