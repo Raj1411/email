@@ -33,14 +33,8 @@ def read_mails():
 
 
 
-# schedule.every(1).minutes.do(read_mails)
+schedule.every(1).minutes.do(read_mails)
 
-# while True:
-#     schedule.run_pending()
-#     time.sleep(1)
-
-cron=CronTab(user='rajinder')
-job=cron.new(command='python3 readEmail.py')
-job.minute.every(1)
-
-cron.write()
+while True:
+    schedule.run_pending()
+    time.sleep(1)
