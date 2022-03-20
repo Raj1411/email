@@ -13,7 +13,7 @@ def read_mails():
     if btn:
         host='imap.gmail.com'
         username='rajinder@swissbeauty.in'
-        password='9711609399A'
+        password=st.secrets['KEY']
 
         mail=imaplib.IMAP4_SSL(host)
         mail.login(username,password)
